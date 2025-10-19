@@ -5,27 +5,27 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration {
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
         Schema::create('booking', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->string('lapangan');
+            $table->string('snap_token')->nullable();
             $table->date('tanggal');
             $table->time('waktu_mulai');
             $table->time('waktu_selesai');
-            $table->integer('lama_sewa')->default(1);
-            $table->decimal('total_harga', 10, 2);
-            $table->string('status')->default('Menunggu konfirmasi');
+            $table->integer('lama_sewa')->default(60);
+            $table->decimal('total_harga');
+            $table->enum('status', ['pending', 'paid', 'cancelled'])->default('pending');
             $table->timestamps();
         });
     }
 
     /**
-     * Reverse the migrations.
+     * Revert the "create_booking_table" migration.
+     *
+     * @return void
      */
     public function down(): void
     {

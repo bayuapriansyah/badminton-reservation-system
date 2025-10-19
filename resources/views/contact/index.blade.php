@@ -66,8 +66,7 @@
 
                 <div class="mt-3 text-sm text-gray-500">
                     <p>Jam Operasional:</p>
-                    <p>Senin - Jumat: 08.00 - 17.00 WIB</p>
-                    <p>Sabtu: 09.00 - 14.00 WIB</p>
+                    <p>Senin - Minggu: 10.00 - 18.00 WIB</p>
                 </div>
             </div>
         </div>
