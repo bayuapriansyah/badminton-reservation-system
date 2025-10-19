@@ -24,7 +24,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/menu', [MenuController::class, 'index'])->name('menu.index');
     Route::post('/menu/store', [MenuController::class, 'store'])->name('menu.store');
     Route::post('/menu/cek', [MenuController::class, 'cekKetersediaan'])->name('menu.cek');
-    Route::post('/menu/bayar', [App\Http\Controllers\MenuController::class, 'bayar'])->name('menu.bayar');
+    Route::post('/menu/bayar', [MenuController::class, 'bayar'])->name('menu.bayar');
     Route::get('/riwayat', [RiwayatController::class, 'index'])->name('riwayat.index');
     Route::get('/contact', [ContactController::class, 'index'])->name('contact.index');
     Route::post('/midtrans/callback', [MidtransController::class, 'callback']);
