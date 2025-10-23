@@ -60,4 +60,4 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
-Aplikasi sistem reservation badminton dengan payment gateway menggunakan laravel 12
+Aplikasi sistem reservation badminton dengan payment gateway midtrans menggunakan laravel 12
